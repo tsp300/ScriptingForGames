@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21667c5c1ee7a4111a1243f78270d1dd, type: 3}
   m_Name: PlayerHealth
   m_EditorClassIdentifier: 
-  value: 0
+  value: 0.1
   minValue: 0
-  maxValue: 0
+  maxValue: 1
   valueOutOfRange:
     m_PersistentCalls:
       m_Calls: []
