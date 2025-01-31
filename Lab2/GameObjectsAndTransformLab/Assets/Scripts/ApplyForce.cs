@@ -7,6 +7,6 @@ public class ApplyForce : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.AddForce(Vector3.forward * -25000*);
+        rb.AddForce(Vector3.forward * -25000);
     }
 }
