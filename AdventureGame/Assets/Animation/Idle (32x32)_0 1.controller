@@ -36,7 +36,7 @@ AnimatorStateMachine:
     m_Position: {x: 480, y: 150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5457455269427647078}
-    m_Position: {x: 380, y: 280, z: 0}
+    m_Position: {x: 370, y: 310, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3183808998623688929}
     m_Position: {x: 100, y: 240, z: 0}
@@ -200,7 +200,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Hit
-  m_Speed: 0.2
+  m_Speed: 0.4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 7389892842692511671}
@@ -249,7 +249,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: DoubleJump
-  m_Speed: 0.2
+  m_Speed: 0.4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 2055942780292505864}
