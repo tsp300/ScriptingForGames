@@ -25,14 +25,29 @@ public class Animat : MonoBehaviour
             animator.SetTrigger("Idle");
         }
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            animator.SetTrigger("DoubleJumpTrigger");
-        }
+        //if (Input.GetButtonDown("Jump"))
+        //{
+        //    animator.SetTrigger("Jump");
+        //}
 
         if (Input.GetKeyDown(KeyCode.W))
         {
             animator.SetTrigger("WallJump");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetTrigger("DoubleJump");
+        }
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            animator.SetTrigger("Hit");
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            animator.SetTrigger("Fall");
         }
     }
 }
