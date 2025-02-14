@@ -25,10 +25,10 @@ public class Animat : MonoBehaviour
             animator.SetTrigger("Idle");
         }
 
-        //if (Input.GetButtonDown("Jump"))
-        //{
-        //    animator.SetTrigger("Jump");
-        //}
+        if (Input.GetButtonDown("Jump"))
+        {
+            animator.SetTrigger("Jump");
+        }
 
         if (Input.GetKeyDown(KeyCode.W))
         {
