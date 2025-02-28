@@ -20,12 +20,11 @@ public class CharMove : MonoBehaviour
     }
 
    
-    void FixedUpdate()
+    void Update()
     {
-        ShmoveEm();
         gravitate();
+        ShmoveEm();
         ZLock();
-        print(control.isGrounded);
     }
 
     void ShmoveEm()
@@ -44,7 +43,7 @@ public class CharMove : MonoBehaviour
     {
         if (!control.isGrounded)
         {
-            shmovement.y -= gravity * Time.deltaTime;
+            shmovement.y -= gravity * Time.deltaTime * 15;
         }
     }
 

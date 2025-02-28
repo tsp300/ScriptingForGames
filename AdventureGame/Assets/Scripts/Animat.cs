@@ -3,6 +3,7 @@ using UnityEngine;
 public class Animat : MonoBehaviour
 {
     private Animator animator;
+    private bool hit;
 
     private void Start()
     {
@@ -40,7 +41,7 @@ public class Animat : MonoBehaviour
             animator.SetTrigger("DoubleJump");
         }
 
-        if (Input.GetKeyDown(KeyCode.H))
+        if (hit == true)
         {
             animator.SetTrigger("Hit");
         }
