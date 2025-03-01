@@ -8,6 +8,7 @@ public class HealthBar : MonoBehaviour
 {
     private Image imageObj;
     public SimpleFloatData health;
+    public float num = 1f;
 
     private void Start()
     {
@@ -16,6 +17,6 @@ public class HealthBar : MonoBehaviour
 
     public void UpdateWithFloatData()
     {
-        imageObj.fillAmount = health.value;
+        imageObj.fillAmount = health.value * num;
     }
 }

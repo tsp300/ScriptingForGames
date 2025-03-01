@@ -5,6 +5,8 @@ using UnityEngine;
 public class CharMove : MonoBehaviour
 {
     public SimpleFloatData health;
+    public SimpleFloatData xp;
+
     public float speed = 10f;
     public float jumpForce = 10f;
     public float gravity = 9.81f;
