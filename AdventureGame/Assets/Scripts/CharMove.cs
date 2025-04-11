@@ -15,11 +15,14 @@ public class CharMove : MonoBehaviour
     private CharacterController control;
     private Vector3 shmovement = Vector3.zero;
 
+    private AudioSource audioSrc;
+
 
     void Start()
     {
         control = GetComponent<CharacterController>();
         ThisTransform = transform;
+        audioSrc = GetComponent<AudioSource>();
     }
 
    
@@ -39,6 +42,7 @@ public class CharMove : MonoBehaviour
         if (Input.GetButtonDown("Jump") && control.isGrounded)
         {
             shmovement.y = Mathf.Sqrt(jumpForce * 2f * gravity);
+            audioSrc.Play();
         }
     }
 
