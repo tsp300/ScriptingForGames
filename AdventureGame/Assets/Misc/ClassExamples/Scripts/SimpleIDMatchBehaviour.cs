@@ -7,6 +7,7 @@ public class SimpleIDMatchBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("bbb");
         var otherID = other.GetComponent<SimpleIDBehaviour>();
         
         if (otherID.id == id)
