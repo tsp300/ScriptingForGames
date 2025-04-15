@@ -23,6 +23,9 @@ public class CharMove : MonoBehaviour
         control = GetComponent<CharacterController>();
         ThisTransform = transform;
         audioSrc = GetComponent<AudioSource>();
+
+        health.value = 1; // Temporary fix so that health 
+        xp.value = 0;  // and xp don't save between testing
     }
 
    

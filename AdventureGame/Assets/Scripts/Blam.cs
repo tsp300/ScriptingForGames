@@ -8,6 +8,5 @@ public class Blam : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         triggerEv.Invoke();
-        Debug.Log("Object got touched!");
     }
 }
