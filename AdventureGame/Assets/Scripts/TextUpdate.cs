@@ -8,7 +8,7 @@ using System.Collections;
 public class TextUpdate : MonoBehaviour
 {
     private TextMeshProUGUI textObj;
-    public SimpleInt dataObj;
+    public SimpleFloatData dataObj;
 
     private int i = 20;
     private RectTransform rectTrans;

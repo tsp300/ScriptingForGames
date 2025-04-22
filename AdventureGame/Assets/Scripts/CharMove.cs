@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharMove : MonoBehaviour
 {
@@ -10,10 +11,16 @@ public class CharMove : MonoBehaviour
     public float speed = 10f;
     public float jumpForce = 10f;
     public float gravity = 9.81f;
+    public float fallingDegree = 5;
+    private bool jjumping;
+
+    private float yPos;
+
 
     private Transform ThisTransform;
     private CharacterController control;
     private Vector3 shmovement = Vector3.zero;
+
 
     private AudioSource audioSrc;
 
@@ -34,6 +41,11 @@ public class CharMove : MonoBehaviour
         gravitate();
         ShmoveEm();
         ZLock();
+
+        if (health.value <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     void ShmoveEm()
@@ -44,16 +56,26 @@ public class CharMove : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && control.isGrounded)
         {
-            shmovement.y = Mathf.Sqrt(jumpForce * 2f * gravity);
+            if (yPos == 0f) { yPos = transform.position.y; }
+            jjumping = true;
             audioSrc.Play();
+        }
+
+        if (jjumping == true)
+        {
+            shmovement.y = jumpForce * Time.deltaTime * gravity * fallingDegree * 0.5f;
+            if (transform.position.y >= yPos + jumpForce) { 
+                jjumping = false;
+                yPos = 0f;
+            }
         }
     }
 
     void gravitate()
     {
-        if (!control.isGrounded)
+        if (!control.isGrounded && jjumping == false)
         {
-            shmovement.y -= gravity * Time.deltaTime * 15;
+            shmovement.y -= gravity * Time.deltaTime * fallingDegree;
         }
     }
 

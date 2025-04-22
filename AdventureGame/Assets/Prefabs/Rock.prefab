@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 6789691791025540904}
   - component: {fileID: -5839274600979467926}
   - component: {fileID: -3098089909996704317}
+  - component: {fileID: 8215147967329074796}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -127,7 +128,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: -0.25
+          m_FloatArgument: -0.5
           m_StringArgument: Hit
           m_BoolArgument: 0
         m_CallState: 2
@@ -5138,4 +5139,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4442bd897e9283949b2e5a2f307ac978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particInt: 10
+  particInt0: 10
+  particInt1: 20
+  particInt2: 30
+  particDelay: 0.5
+--- !u!114 &8215147967329074796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6925853885418074248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff8b60be70b9e141b43613e543840f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
