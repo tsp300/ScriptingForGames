@@ -30,7 +30,7 @@ public class TextUpdate : MonoBehaviour
     {
         rectTrans.rotation = Quaternion.Euler(0,0,i);
         yield return new WaitForSeconds(0.1f);
-        rectTrans.rotation = Quaternion.Euler(0,0,-i);
+        rectTrans.rotation = Quaternion.Euler(0,0,-2 * i);
         yield return new WaitForSeconds(0.1f);
         rectTrans.rotation = Quaternion.Euler(0, 0, 0);
         i *= -1;

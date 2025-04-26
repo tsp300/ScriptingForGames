@@ -36,7 +36,7 @@ public class CharMove : MonoBehaviour
     }
 
    
-    void Update()
+    void FixedUpdate()
     {
         gravitate();
         ShmoveEm();
